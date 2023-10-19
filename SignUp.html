@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Input Elements</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">SignUP</h1>
+        <hr>
+       <div class="input-fields">
+
+            <div class="input-field">
+                <label for="username-input">Enter User Name : </label>
+                <input type="text" id="username-input">
+            </div>
+    
+            <div class="input-field">
+                <label for="email-id">Enter Valid Email Id : </label>
+                <input type="text" id="email-id">
+            </div>
+    
+            <div class="input-field">
+                <label for="pswd">Enter Your Password : </label>
+                <input type="text" id="pswd">
+            </div>
+    
+            <div class="input-field flex">
+                <label for="re-pswd">Re-Enter Your Password : </label>
+                <input type="text" id="re-pswd">
+            </div>
+
+       </div>
+    
+       <div class="button">
+        <button class="btn" onclick="active()">SignUp</button>
+       </div>
+    
+        <div class="output">
+            <p id="result"></p>
+        </div>
+    </div>
+    
+    <script>
+        let active = () =>{
+            console.log("Entered in to Function")
+            let userInputElement = document.getElementById('username-input').value;
+            let emailIdElement = document.getElementById('email-id').value;
+            let resultElement = document.getElementById('result'); 
+            let resultValue = "Hello " +  userInputElement + " Your Account has Created with an Email-ID " + emailIdElement;
+            resultElement.textContent = resultValue;
+            console.log(resultValue);
+        }
+    </script>
+</body>
+</html>
